@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="PW" id="insert-1">
+        <insert schemaName="choir"
+                tableName="chorister">
+            <column name="id" value="1" type="int(11)"/>
+            <column name="name" value="Tadeusz" type="VARCHAR(255)"/>
+            <column name="phone_number" value="567878656" type="VARCHAR(255)"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="PW" id="insert-2">
+        <insert schemaName="choir"
+                tableName="chorister">
+            <column name="id" value="2" type="int(11)"/>
+            <column name="name" value="Ania" type="VARCHAR(255)"/>
+            <column name="phone_number" value="768987560" type="VARCHAR(255)"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="PW" id="insert-3">
+        <insert schemaName="choir"
+                tableName="chorister">
+            <column name="id" value="3" type="int(11)"/>
+            <column name="name" value="Franek" type="VARCHAR(255)"/>
+            <column name="phone_number" value="765987567" type="VARCHAR(255)"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

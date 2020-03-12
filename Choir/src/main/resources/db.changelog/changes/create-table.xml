@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+
+    <changeSet author="PW" id="create-1">
+        <preConditions onFail="CONTINUE">
+            <not><tableExists tableName="chorister"/></not>
+        </preConditions>
+        <createTable tableName="chorister">
+            <column name="id" type="int(11)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="phone_number" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="PW" id="create-2">
+        <preConditions onFail="CONTINUE">
+            <not><tableExists tableName="hibernate_sequence"/></not>
+        </preConditions>
+        <createTable tableName="hibernate_sequence">
+            <column name="next_val" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
